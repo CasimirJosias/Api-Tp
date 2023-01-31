@@ -1,0 +1,5 @@
+
+GET http://localhost:3001/brands
+Content-Type:application/json
+Authorization:  Beare jojo
+ 
