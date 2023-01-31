@@ -18,6 +18,14 @@ const auth = (request, response, next) => {
     }
 
 }
+const cors = (request, response, next) => {
+    response.set("Access-Control-Allow-Origin", "localhost:8000")
+    response.set("Access-Control-Allow-Origin", "localhost:9007")
+    response.set("Access-Control-Allow-Methods","GET")
+    next()
+}
+
+app.use(cors);
 
 app.get('/', auth, (request, response) => {
     response.send("Li pase")
